@@ -9,24 +9,24 @@ const Form = () => {
 
   const dispatch = useDispatch();
   const [todo, setTodo] = useState({
-    id: 0,
+    id: '',
     title: '',
     body: '',
     isDone: false,
   });
 
-  const onChangeHandler = (event) => {
-    const { name, value } = event.target;
+  const onChangeHandler = (e) => {
+    const { name, value } = e.target;
     setTodo({ ...todo, [name]: value });
   };
 
-  const onSubmitHandeler = (event) => {
-    event.preventDefault();
-    if (todo.title.trim() === '' || todo.body.trim() === '') return;
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    if (todo.title.length === 0 || todo.body.length === 0) return;
 
     dispatch(addTodo({ ...todo, id }));
     setTodo({
-      id: 0,
+      id: '',
       title: '',
       body: '',
       isDone: false,
@@ -34,7 +34,7 @@ const Form = () => {
   };
 
   return (
-    <InputBox onSubmit={onSubmitHandeler}>
+    <InputBox onSubmit={onSubmitHandler}>
       <InputForm>
         <FormLabel>제목</FormLabel>
         <FormInput
@@ -62,7 +62,7 @@ export default Form;
 
 const InputBox = styled.form`
   height: 80px;
-  background-color: #a3ffd9;
+  background-color: #e1ecc8;
   padding: 15px;
   display: flex;
   align-items: center;
@@ -94,7 +94,8 @@ const SubmitButton = styled.button`
   border: none;
   background-color: #fff;
   font-weight: bold;
+  cursor: pointer;
   &:hover {
-    background-color: #32e1b8;
+    background-color: #a0c49d;
   }
 `;

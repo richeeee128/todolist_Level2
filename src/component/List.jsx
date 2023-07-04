@@ -37,7 +37,7 @@ const List = () => {
                     삭제하기
                   </ToggleButton>
                   <ToggleButton
-                    bordercolor='green'
+                    bordercolor='blue'
                     onClick={() => onToggleStatusTodo(todo.id)}
                   >
                     {todo.isDone ? '취소' : '완료'}
@@ -71,7 +71,7 @@ const List = () => {
                     삭제하기
                   </ToggleButton>
                   <ToggleButton
-                    bordercolor='green'
+                    bordercolor='blue'
                     onClick={() => onToggleStatusTodo(todo.id)}
                   >
                     {todo.isDone ? '취소' : '완료'}
@@ -97,13 +97,13 @@ const ListContainer = styled.div`
 const ListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
   margin-left: 70px;
 `;
 
 const TodoContainer = styled.div`
   width: 270px;
-  border: 3px solid green;
+  border: 2px solid #a0c49d;
   min-height: 100px;
   border-radius: 12px;
   padding: 25px;
@@ -117,8 +117,8 @@ const TodoDetailLink = styled(Link)`
 const ButtonBox = styled.div`
   display: flex;
   justify-content: end;
-  padding: 12px;
-  gap: 12px;
+  padding-top: 25px;
+  gap: 15px;
 `;
 
 const ToggleButton = styled.button`

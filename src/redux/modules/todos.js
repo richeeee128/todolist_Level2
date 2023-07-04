@@ -63,6 +63,7 @@ const todos = (state = initialState, action) => {
         todos: [...state.todos, action.payload],
       };
 
+    //챗지의 도움받았음
     case DELETE_TODO:
       return {
         ...state,

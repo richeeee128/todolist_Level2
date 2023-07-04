@@ -16,68 +16,69 @@ const Detail = () => {
   }, [dispatch, id]);
 
   return (
-    <StContainer>
-      <StDialog>
-        <div>
-          <StDialogHeader>
-            <div>ID {todo.id}</div>
-            <StButton
-              borderColor='#ddd'
-              onClick={() => {
-                navigate('/');
-              }}
-            >
-              이전으로
-            </StButton>
-          </StDialogHeader>
-          <StTitle>{todo.title}</StTitle>
-          <StBody>{todo.body}</StBody>
-        </div>
-      </StDialog>
-    </StContainer>
+    <Container>
+      <Dialog>
+        <DialogHeader>
+          <div>ID : {todo.id}</div>
+          <Button
+            bordercolor='#A0C49D'
+            onClick={() => {
+              navigate('/');
+            }}
+          >
+            이전으로
+          </Button>
+        </DialogHeader>
+        <DetailTitle>{todo.title}</DetailTitle>
+        <DetailBody>{todo.body}</DetailBody>
+      </Dialog>
+    </Container>
   );
 };
 export default Detail;
 
-const StContainer = styled.div`
-  border: 2px solid #eee;
-  width: 100%;
-  height: 100vh;
+const Container = styled.div`
+  width: 100vw;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-const StDialog = styled.div`
-  width: 600px;
-  height: 400px;
-  border: 1px solid #eee;
+const Dialog = styled.div`
+  width: 500px;
+  height: 300px;
+  border: 1px solid #a0c49d;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `;
 
-const StDialogHeader = styled.div`
+const DialogHeader = styled.div`
   display: flex;
   height: 80px;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 25px;
   align-items: center;
 `;
 
-const StTitle = styled.h1`
-  padding: 0 24px;
+const DetailTitle = styled.h1`
+  padding: 0 25px;
 `;
 
-const StBody = styled.main`
-  padding: 0 24px;
+const DetailBody = styled.main`
+  padding: 25px;
 `;
 
-const StButton = styled.button`
-  border: 1px solid ${({ borderColor }) => borderColor};
+const Button = styled.button`
+  border: 2px solid ${({ bordercolor }) => bordercolor};
   height: 40px;
   width: 120px;
   background-color: #fff;
   border-radius: 12px;
+  font-weight: bold;
   cursor: pointer;
+  &:hover {
+    background-color: #a0c49d;
+  }
 `;
