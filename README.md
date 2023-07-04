@@ -1,7 +1,17 @@
-## Header
+## Title
 
-## InputBox
+Home 화면에서 맨 위 my todo list, React 부분을 분리했습니다.
+컴포넌트 분리에 익숙하지 않아 연습 차원으로 분리했습니다.
 
-## Working
+## Form
 
-## Done
+제목과 내용 그리고 추가하기 버튼이 있는 Form 컴포넌트입니다.
+
+## List
+
+Working 디렉토리와 Done 디렉토리를 나타내는 List 컴포넌트입니다.
+중복되는 값이 많아 컴포넌트를 분리해보려 시도했지만 미숙하여 분리하지 못했습니다.
+
+## DetailPage
+
+상세보기 버튼을 누르면 나오는 상세페이지입니다.
