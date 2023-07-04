@@ -1,18 +1,34 @@
 import React from 'react';
-import Header from './component/Header';
-import InputBox from './component/InputBox';
-import Working from './component/Working';
-import Done from './component/Done';
+import { styled } from 'styled-components';
 
-function Home() {
+import Form from '../component/Form';
+import List from '../component/List';
+
+const Home = () => {
   return (
-    <div>
-      <Header />
-      <InputBox />
-      <Working />
-      <Done />
-    </div>
+    <Layout>
+      <Title>
+        <p>My Todo List</p>
+        <p>React</p>
+      </Title>
+      <Form />
+      <List />
+    </Layout>
   );
-}
+};
 
 export default Home;
+
+const Layout = styled.div`
+  max-width: 1200px;
+  min-width: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+`;
+
+const Title = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+`;
