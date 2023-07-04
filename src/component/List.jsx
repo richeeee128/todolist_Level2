@@ -52,11 +52,11 @@ const List = () => {
       </ListWrapper>
       <h2>Done..! 🎉</h2>
       <ListWrapper>
-        {todos.map((todo, index) => {
+        {todos.map((todo) => {
           if (todo.isDone) {
             return (
               <TodoContainer key={todo.id}>
-                <TodoDetailLink to={`/${index}`} key={todo.id}>
+                <TodoDetailLink to={`/${todo.id}`} key={todo.id}>
                   <div>상세보기</div>
                 </TodoDetailLink>
                 <div>
