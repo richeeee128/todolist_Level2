@@ -3,14 +3,12 @@ import { styled } from 'styled-components';
 
 import Form from '../component/Form';
 import List from '../component/List';
+import Title from '../component/Title';
 
 const Home = () => {
   return (
     <Layout>
-      <Title>
-        <p>My Todo List</p>
-        <p>React</p>
-      </Title>
+      <Title />
       <Form />
       <List />
     </Layout>
@@ -25,10 +23,4 @@ const Layout = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-`;
-
-const Title = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
 `;
